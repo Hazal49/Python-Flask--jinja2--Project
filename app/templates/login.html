@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block body_area %}
+<section class="wrapper">
+    <div class="inner">
+        <!-- Form -->
+        <h3>Giriş</h3>
+        <form method="post" action="{{url_for('Login')}}">
+            <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                    <input type="text" name="username" id="username" value="" placeholder="İsim"/>
+                </div>
+                <div class="col-6 col-12-xsmall">
+                    <input type="password" name="password" id="password" value="" placeholder="E-mail"/>
+                </div>
+
+                <!-- Break -->
+                <div class="col-12">
+                    <ul class="actions">
+                        <li><input type="submit" value="GÖNDER" class="primary"/></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

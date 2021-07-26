@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block body_area %}
+<section class="wrapper">
+    <div class="inner">
+        <h4>Kaydolan Kişilerin Listesi</h4>
+        <div class="table-wrapper">
+            <table class="alt">
+                <thead>
+                <tr>
+                    <th>İsim</th>
+                    <th>E-mail</th>
+                    <th>Şifre</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for name, email, password in kisiler_list %}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{email}}</td>
+                    <td>{{password}}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
